@@ -230,8 +230,6 @@ client.on('message', function(msg) {
       message.channel.sendEmbed(embed);
     }
 });
-
-});
 client.on('message', message => {
      if (message.content === "*inv") {
      let embed = new Discord.RichEmbed()
@@ -283,7 +281,6 @@ return;
         return;
     }
 });
-});
 client.on('message', message => {
   if (true) {
 if (message.content === '*inv') {
@@ -293,4 +290,4 @@ if (message.content === '*inv') {
    } 
   });
 
-client.login('NTYzNDE4Njg2NDA1MzQ1Mjky.XKp02g.wmF-sYKCxxFrwkahAFSxpCR1mOQ');
+client.login('NTYzNDE4Njg2NDA1MzQ1Mjky.XK68AA.yEGYJux6Aa4Hy0xSrVj2MMDnweA');
