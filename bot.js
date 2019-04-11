@@ -42,25 +42,20 @@ client.on("message", message => {
          .setDescription(`**
          ------------------------------
          *bc1 : برودكاست لجميع اعضاء السيرفر بايمبد
-         *bc2 : برودكاست لجميع اعضاء السيرفر بدون ايمبد
-         *bc3 : برودكاست للاعضاء  الاونلاين فقط
          ------------------------------
          *id : عرض ملفك الشخصي
          *ask : البوت يسئلك اسئلة
          *server : احصائيات السيرفر
          ------------------------------
-         *ban : حظر العضو من السيرفر
-         *kick : طرد العضو من السيرفر
          *clear : مسح الشات
-         *createroles : عمل رتب متكاملة للسيرفر
-         *voicesetup : انشاء روم فويس اونلاين
-         لكتابة الكلام الذي في الروم اكتب _voicesetup الكلام و 0 
+         *createroles : عمل رتب متكاملة للسيرفر 
          ------------------------------
          *guilds : عدد سيرفر البوت
-         *inv : دعوه البوت الى سيرفر
+		 *inv : دعوه البوت الى سيرفر
          *help : عرض هذه الرسالة
          ------------------------------
-         
+         Create By ★ є ℓ - ρ α τ я σ и ★
+		 ------------------------------
        **  `)
 	   
    message.author.sendEmbed(embed)
@@ -235,35 +230,7 @@ client.on('message', function(msg) {
       message.channel.sendEmbed(embed);
     }
 });
-client.on('message', message => {
-    if (message.content.startsWith("*inv")) {
 
-  message.channel.createInvite({
-        thing: true,
-        maxUses: 100,
-        maxAge: 86400
-    }).then(invite =>
-      message.author.sendMessage(invite.url)
-    )
-    const embed = new Discord.RichEmbed()
-        .setColor("RANDOM")
-        .setDescription("| :white_check_mark:  | :heart:  تم ارسال الرابط على الخاص  ")
-      message.channel.sendEmbed(embed).then(message => {message.delete(10000)})
-              const Embed11 = new Discord.RichEmbed()
-        .setColor("RANDOM")
-                .setAuthor(message.guild.name, message.guild.iconURL)
-        .setDescription(`
-**
----------------------
-- [${message.guild.name}]  هذا هو رابط سيرفر
----------------------
-- هذا الرابط صالح ل 100 مستخدم فقط
----------------------
-- هذا الرابط صالح لمده 24 ساعه فقط
----------------------
-**`)
-      message.author.sendEmbed(Embed11)
-    }
 });
 client.on('message', message => {
      if (message.content === "*inv") {
@@ -294,7 +261,6 @@ client.on('message',function(message) {
        message.channel.send(`channels: \`\`${client.channels.size}\`\``);
    } 
 });
-
 client.on('message', message => {
     if (message.author.id === client.user.id) return;
     if (message.guild) {
@@ -317,46 +283,14 @@ return;
         return;
     }
 });
+});
 client.on('message', message => {
-if (message.author.id === client.user.id) return;
-if (message.guild) {
-let embed = new Discord.RichEmbed()
-let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + 'bc2') {
-if(!message.channel.guild) return message.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
-if (!args[1]) {
-return;
-}
-  message.guild.members.forEach(m => {
-if(!message.member.hasPermission('ADMINISTRATOR')) return;
-      var bc = new Discord.RichEmbed()
-      .addField('# | الرسالة ', args)
-      .setThumbnail(message.guild.iconURL)
-      .setColor('RANDOM')
-      m.sendMessage(args)
+  if (true) {
+if (message.content === '*inv') {
+      message.author.send('https://discordapp.com/api/oauth2/authorize?client_id=563418686405345292&permissions=8&scope=bot').catch(e => console.log(e.stack));
+
+    }
+   } 
   });
-         if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply(":x: **ليس لديك صلاحية للنشر هنا**");
-  const AziRo = new Discord.RichEmbed()   
-  .setColor('RANDOM')
-  message.channel.sendEmbed(AziRo);          
-}
-} else {
-  return;
-}
-});
-client.on("message", message => {
-
-            if (message.content.startsWith(prefix + "bc3")) {
-                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
-  let args = message.content.split(" ").slice(1);
-  var argresult = args.join(' '); 
-  message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
- m.send(`${argresult}\n ${m}`);
-})
- message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` : عدد الاعضاء المستلمين`); 
- message.delete(); 
-};     
-});
-
 
 client.login('NTYzNDE4Njg2NDA1MzQ1Mjky.XKp02g.wmF-sYKCxxFrwkahAFSxpCR1mOQ');
