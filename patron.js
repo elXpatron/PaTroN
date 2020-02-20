@@ -290,4 +290,4 @@ if (message.content === '*inv') {
    } 
   });
 
-client.login('NTYzNDE4Njg2NDA1MzQ1Mjky.Xk38rg.hs0yDGGelaOZ_PDhdRXBoWGHlTo');
+client.login('NTYzNDE4Njg2NDA1MzQ1Mjky.Xk4DHw.RPIyrC3SkJNTg6dCIBr9j_Y-lyo');
