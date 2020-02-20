@@ -30,8 +30,8 @@ client.on('message', msg => {
   }
 });
 client.on('message', msg => {
-  if (msg.content === 'what is best team in world ?') {
-    msg.reply('team 404');
+  if (msg.content === 'suprime') {
+    msg.reply('oui bro');
   }
 });
 client.on("message", message => {
@@ -54,7 +54,7 @@ client.on("message", message => {
 		 *inv : دعوه البوت الى سيرفر
          *help : عرض هذه الرسالة
          ------------------------------
-         Create By ★ є ℓ - ρ α τ я σ и ★
+         Create By ♆ S U P R I M E ♆#9864
 		 ------------------------------
        **  `)
 	   
